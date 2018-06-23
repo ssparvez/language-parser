@@ -282,11 +282,12 @@ def main(): #parse code
     inputFile.close()
 
     # while True:
-    # try: s = input('>> ')
-    # except EOFError: break
-    # try: parser.parse(s)
-    # except SyntaxError: print("Syntax Error")
-    # except (TypeError, ZeroDivisionError, IndexError, KeyError, SemanticError):
-    #     print("Semantic Error")
+    #     try: 
+    #         s = input('>> ')
+    #         parser.parse(s)
+    #     except EOFError: break
+    #     except SyntaxError: print("Syntax Error")
+    #     except (TypeError, ZeroDivisionError, IndexError, KeyError, SemanticError):
+    #         print("Semantic Error")
 
 main()

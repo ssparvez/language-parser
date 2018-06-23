@@ -1,6 +1,5 @@
 .vscode
 
-
 # parser output
 src/parser.out
 src/parsetab.py

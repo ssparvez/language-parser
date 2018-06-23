@@ -32,7 +32,6 @@ class ListNode(Node):
 
 class NameNode(Node):
     def __init__(self, v): self.value = v
-
     def evaluate(self): return env[self.value]
 
 class IndexNode(Node):
@@ -88,13 +87,11 @@ class UopNode(Node):
 
     def evaluate(self):
         self.checkTypeSemantics()
-        if (self.op == 'not'):
-            return 1 if not self.v1.evaluate() else 0
+        if (self.op == 'not'): return 1 if not self.v1.evaluate() else 0
 
     def checkTypeSemantics(self):
         if self.op == 'not':
-            if not (isinstance(self.v1.evaluate(), int)):
-                raise SemanticError
+            if not (isinstance(self.v1.evaluate(), int)): raise SemanticError
 
 # STATEMENT NODES
 class PrintNode(Node):
@@ -119,8 +116,7 @@ class BlockNode(Node):
     def __init__(self, v): self.value = v
     def execute(self):
         if len(self.value) != []: # if no statements ie {}
-            for statement in self.value:
-                statement.execute()
+            for statement in self.value: statement.execute()
 
 class WhileNode(Node):
     def __init__(self, v1, v2):
@@ -131,7 +127,7 @@ class WhileNode(Node):
         counter = 0
         while self.v1.evaluate() != 0:
             self.v2.execute()
-            counter+=1
+            counter += 1
 
 class ConditionalNode(Node):
     def __init__(self, v1, v2):
@@ -139,11 +135,9 @@ class ConditionalNode(Node):
         self.v2 = v2 # else node
 
     def execute(self):
-        if self.v1.evaluate() == True:
-            self.v1.execute()
+        if self.v1.evaluate() == True: self.v1.execute()
         else:
-            if self.v2 != None:
-                self.v2.execute()
+            if self.v2 != None: self.v2.execute()
 
 class IfNode(Node):
     def __init__(self, v1, v2):
