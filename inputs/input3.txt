@@ -1,0 +1,92 @@
+{
+
+{
+  data = [ [ 100, 42 ], [ 100, 50 ], [ 123, 456 ], [ 300, 9000 ] ];
+  result = [ 0, 0, 0, 0 ];
+  i = 0;
+  while (i < 4){
+    a = data[i][0];
+    b = data[i][1];
+    if (a > 0){
+      while (b > 0){
+        if (a > b){
+          a = a - b;
+        } else {
+          b = b - a;
+        }
+       }
+    }
+    result[i] = a;
+    i = i + 1;
+  }
+  print(result);
+}
+
+{
+  number = 33;
+  isPrime = 1;
+  i = 2;
+  while(isPrime==1 and (i < number/2+1)) {
+    if (number%i==0) {
+      isPrime = 0;
+    }
+   i = i + 1;
+  }
+  if(isPrime==1){
+    print("isPrime is true");
+  } else {
+    print("isPrime is false");
+  }
+}
+
+{
+  x = 1;
+  {
+    x=2;
+    z=3;
+  }
+  print(x);
+  print(z);
+}
+
+{
+         a = 1;
+         if (a == 0)
+              print("TRUE"); 
+         else
+             print("FALSE");
+}
+
+{
+     data = [10,20];
+     i = 0;
+     while (i < 2){
+           a = data[i];
+           print(a);
+           i = i +1;
+}
+}
+
+{
+if (0)
+  print("c");
+else if (0) {
+  print("a");
+} else if (1) {
+  print("r");
+} else 
+print("V");
+}
+
+{
+{
+  x = 4;
+  while(x > 4)
+    if(x == 2)
+      print("x is 2");
+}
+}
+
+{print([1, "a", 2]);}
+
+}

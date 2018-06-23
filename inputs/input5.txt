@@ -1,0 +1,10 @@
+{
+if (0)
+  print("c");
+else if (0) {
+  print("a");
+} else if (1) {
+  print("r");
+} else 
+print("V");
+}
